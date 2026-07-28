@@ -45,3 +45,29 @@ let month = Number(document.getElementById("month").value);
 let year = Number(document.getElementById("year").value);
 
 let gender = document.getElementById("gender").value;
+
+// Validation
+
+if(day<1 || day>31){
+
+alert("Invalid day");
+
+return;
+
+}
+
+if(month<1 || month>12){
+
+alert("Invalid month");
+
+return;
+
+}
+
+if(gender===""){
+
+alert("Select gender");
+
+return;
+
+}
