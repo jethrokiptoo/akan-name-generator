@@ -1,3 +1,4 @@
+// Male Akan names
 const maleNames = [
     "Kwasi",
     "Kwadwo",
@@ -8,6 +9,7 @@ const maleNames = [
     "Kwame"
 ];
 
+// Female Akan names
 const femaleNames = [
     "Akosua",
     "Adwoa",
@@ -18,6 +20,7 @@ const femaleNames = [
     "Ama"
 ];
 
+// Days of the week
 const days = [
     "Sunday",
     "Monday",
@@ -28,50 +31,65 @@ const days = [
     "Saturday"
 ];
 
-  document.addEventListener("DOMContentLoaded", 
-    function () {
+const form = document.getElementById("akanForm");
+const result = document.getElementById("result");
 
-    const form = document.getElementById("akanForm");
-    
- document.getElementById("akanForm").addEventListener("submit", function (event) {
+form.addEventListener("submit", function (event) {
+
     event.preventDefault();
 
+    const day = Number(document.getElementById("day").value);
+    const month = Number(document.getElementById("month").value);
+    const year = Number(document.getElementById("year").value);
 
+    const gender = document.querySelector(
+        'input[name="gender"]:checked'
+    );
 
-        const day = parseInt(document.getElementById("day").value);
-        const month = parseInt(document.getElementById("month").value);
-        const year = parseInt(document.getElementById("year").value);
+    // Validation
 
-        const gender = document.querySelector('input[name="gender"]:checked');
+    if (day < 1 || day > 31) {
+        alert("Please enter a valid day.");
+        return;
+    }
 
-        // Validate inputs
-        if (isNaN(day) || day < 1 || day > 31) {
-            alert("Please enter a valid day (1-31).");
-            return;
-        }
+    if (month < 1 || month > 12) {
+        alert("Please enter a valid month.");
+        return;
+    }
 
-        if (isNaN(month) || month < 1 || month > 12) {
-            alert("Please enter a valid month (1-12).");
-            return;
-        }
+    if (!gender) {
+        alert("Please select your gender.");
+        return;
+    }
 
-        if (isNaN(year) || year < 1000) {
-            alert("Please enter a valid year.");
-            return;
-        }
+    // Check for real dates
+    const birthDate = new Date(year, month - 1, day);
 
-        if (!gender) {
-            alert("Please select your gender.");
-            return;
-        }
+    if (
+        birthDate.getFullYear() !== year ||
+        birthDate.getMonth() !== month - 1 ||
+        birthDate.getDate() !== day
+    ) {
+        alert("Please enter a valid date.");
+        return;
+    }
 
-        console.log("Day:", day);
-        console.log("Month:", month);
-        console.log("Year:", year);
-        console.log("Gender:", gender.value);
+    // Get day number
+    const dayIndex = birthDate.getDay();
 
-        // Continue with your Akan name calculation here
+    let akanName = "";
 
-    });
+    if (gender.value === "male") {
+        akanName = maleNames[dayIndex];
+    } else {
+        akanName = femaleNames[dayIndex];
+    }
+
+    result.innerHTML = `
+        <h2>Your Result</h2>
+        <p><strong>Birthday:</strong> ${days[dayIndex]}</p>
+        <p><strong>Akan Name:</strong> ${akanName}</p>
+    `;
 
 });
