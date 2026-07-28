@@ -19,3 +19,15 @@ const femaleNames = [
     "Afua",
     "Ama"
 ];
+
+// Days
+
+const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
