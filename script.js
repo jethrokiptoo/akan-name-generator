@@ -31,3 +31,17 @@ const days = [
     "Friday",
     "Saturday"
 ];
+
+document
+.getElementById("akanForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let day = Number(document.getElementById("day").value);
+
+let month = Number(document.getElementById("month").value);
+
+let year = Number(document.getElementById("year").value);
+
+let gender = document.getElementById("gender").value;
