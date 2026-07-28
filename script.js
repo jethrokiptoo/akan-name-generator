@@ -71,3 +71,30 @@ alert("Select gender");
 return;
 
 }
+// JavaScript Date object
+
+let birthDate = new Date(year,month-1,day);
+
+let weekDay = birthDate.getDay();
+
+let akanName;
+
+if(gender==="male"){
+
+akanName = maleNames[weekDay];
+
+}
+
+else{
+
+akanName = femaleNames[weekDay];
+
+}
+
+
+document.getElementById("result").innerHTML=
+
+`You were born on <strong>${days[weekDay]}</strong>.<br>
+Your Akan name is <strong>${akanName}</strong>.`;
+
+});
