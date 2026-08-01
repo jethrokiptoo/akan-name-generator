@@ -1,83 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akan Name Generator</title>
+    <meta name="description"
+        content="Akan Name Generator - Discover your traditional Akan name based on your birth date and gender.">
+    <title>Akan Name Generator | Discover Your Akan Name</title> 
+    
+    <!-- CSS CONNECTION -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<div class="container">
+<body> 
+    
+    
+    <!--  NAVIGATION  -->
+    <header class="header">
+        <nav class="navbar"> <a href="#home" class="logo"> 
+            <span>✦</span>
+             Akan<span>Name</span>
+             </a> <button
+                class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"> ☰ </button>
+            <ul class="nav-links" id="navLinks">
+                <li> <a href="#home">Home</a> </li>
+                <li> <a href="#generator">Generator</a> </li>
+                <li> <a href="#about">About Akan</a> </li>
+            </ul> <a href="#generator" class="nav-button"> Find My Name </a>
+        </nav>
+    </header> 
+    <!-- hero -->
 
-    <h1>Akan Name Generator</h1>
 
-    <p>
-        Enter your birthday and gender to discover your traditional
-        Akan name from Ghana.
-    </p>
-
-    <form id="akanForm">
-
-        <label for="day">Day</label>
-        <input
-            type="number"
-            id="day"
-            placeholder="1 - 31"
-            required
-        >
-
-        <label for="month">Month</label>
-        <input
-            type="number"
-            id="month"
-            placeholder="1 - 12"
-            required
-        >
-
-        <label for="year">Year</label>
-        <input
-            type="number"
-            id="year"
-            placeholder="e.g. 2002"
-            required
-        >
-
-        <label>Gender</label>
-
-        <div class="gender">
-
-            <label>
-                <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                >
-                Male
-            </label>
-
-            <label>
-                <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                >
-                Female
-            </label>
-
-        </div>
-
-        <button type="submit">
-            Generate Akan Name
-        </button>
-
-    </form>
-
-    <div id="result"></div>
-
-</div>
-
-<script src="script.js"></script>
-
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-decoration decoration-two"></div>
+            <div class="hero-content">
+                <p class="eyebrow"> GHANAIAN HERITAGE • TRADITION • IDENTITY </p>
+                <h1> Discover the name <span>Written in Your Birth Day.</span> </h1>
+                <p class="hero-description"> Your birth day carries a story. Enter your date of birth and gender to
+                    discover the traditional Akan name connected to your day. </p>
+                <div class="hero-buttons"> 
+                    <a href="#generator" class="primary-button"> Discover My Akan Name
+                        <span>→</span> </a>
+                         <a href="#about" class="secondary-button"> Learn More </a> </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-card-top"> <span>YOUR IDENTITY</span> <span>✦</span> </div>
+                <div class="hero-symbol"> ✺ </div>
+                <h3> Every day has <span>a name.</span> </h3>
+                <p> Find yours. </p>
+            </div>
+        </section> <!-- GENERATOR -->
+        <section class="generator-section" id="generator">
+            <div class="section-heading">
+                <p class="eyebrow"> YOUR JOURNEY STARTS HERE </p>
+                <h2> Find Your <span>Akan Name</span> </h2>
+                <p> Enter your birth details below and let us reveal the name associated with your day. </p>
+            </div>
+            <div class="generator-container">
+                <div class="form-card">
+                    <div class="card-number"> 01 </div>
+                    <h3> Enter your details </h3>
+                    <p class="card-intro"> Please provide accurate information to generate your Akan name. </p>
+                    <form id="akanForm">
+                        <div class="form-row">
+                            <div class="form-group"> <label for="day"> Day </label> <input type="number" id="day"
+                                    placeholder="15" min="1" max="31" required> </div>
+                            <div class="form-group"> <label for="month"> Month </label> <input type="number" id="month"
+                                    placeholder="08" min="1" max="12" required> </div>
+                        </div>
+                        <div class="form-group"> <label for="year"> Year </label> <input type="number" id="year"
+                                placeholder="2004" min="1" required> </div>
+                        <div class="form-group"> <label for="gender"> Gender </label> <select id="gender" required>
+                                <option value=""> Select your gender </option>
+                                <option value="male"> Male </option>
+                                <option value="female"> Female </option>
+                            </select> </div> <button type="submit" class="generate-button"> <span>Reveal My Akan
+                                Name</span> <span>✦</span> </button> <button type="button" id="resetButton"
+                            class="reset-button"> Clear Form </button>
+                    </form>
+                </div> <!-- RESULT CARD -->
+                <div class="result-card" id="resultCard">
+                    <div class="result-placeholder" id="resultPlaceholder">
+                        <div class="placeholder-icon"> ✦ </div>
+                        <h3> Your result will appear here </h3>
+                        <p> Complete the form to discover your Akan name. </p>
+                    </div>
+                    <div class="result-content" id="resultContent">
+                        <p class="result-label"> YOUR AKAN IDENTITY </p>
+                        <div class="result-line"></div>
+                        <p id="resultMessage"> You were born on </p>
+                        <h2 id="resultDay"> Sunday </h2>
+                        <p class="your-name"> Your traditional name is </p>
+                        <div class="akan-name" id="akanName"> Kwasi </div>
+                        <p class="result-description" id="resultDescription"> A beautiful name connected to your day of
+                            birth. </p>
+                        <div class="result-decoration">  </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+        <!--  ABOUT  -->
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="eyebrow"> THE STORY BEHIND THE NAME </p>
+                    <h2> A name is more than <span>a word.</span> </h2>
+                    <p> Akan names are deeply connected to Ghanaian culture and tradition. Traditionally, children may
+                        receive a name associated with the day of the week on which they were born. </p>
+                    <p> These names are part of a rich cultural tradition that connects identity, family, history, and
+                        community. </p>
+                </div>
+                <div class="days-grid">
+                    <div class="day-item"> <strong>Sun</strong> <span>Kwasi / Akosua</span> </div>
+                    <div class="day-item"> <strong>Mon</strong> <span>Kwadwo / Adwoa</span> </div>
+                    <div class="day-item"> <strong>Tue</strong> <span>Kwabena / Abenaa</span> </div>
+                    <div class="day-item"> <strong>Wed</strong> <span>Kwaku / Akua</span> </div>
+                    <div class="day-item"> <strong>Thu</strong> <span>Yaw / Yaa</span> </div>
+                    <div class="day-item"> <strong>Fri</strong> <span>Kofi / Afua</span> </div>
+                    <div class="day-item"> <strong>Sat</strong> <span>Kwame / Ama</span> </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER  -->
+    <footer class="footer">
+        <div class="footer-logo"> ✦ AkanName </div>
+        <p> Discover your identity. Celebrate your heritage. </p>
+        <div class="footer-line"></div>
+        <p class="copyright"> © 2026 Akan Name Generator. Designed by Jethro Kiptoo. </p>
+    </footer>
+    
+    <!-- JAVASCRIPT CONNECTION -->
+    <script src="script.js"></script>
 </body>
+
 </html>
