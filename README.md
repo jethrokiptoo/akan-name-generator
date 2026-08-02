@@ -1,6 +1,6 @@
-# Akan Name Generator 🌍
+# Akan Name Generator 
 
-## Project Description
+ Project Description
 
 The Akan Name Generator is a simple web application that determines the day of the week a person was born and assigns an Akan name based on their gender.
 
@@ -8,29 +8,30 @@ Akan names originate from Ghanaian culture, where traditional names are associat
 
 The application accepts a user's day, month, year, and gender, validates the information, calculates the day of the week, and displays the appropriate Akan name.
 
----
 
-## Akan Names
 
-| Day       | Male Name | Female Name |
-| --------- | --------- | ----------- |
-| Sunday    | Kwasi     | Akosua      |
-| Monday    | Kwadwo    | Adwoa       |
-| Tuesday   | Kwabena   | Abenaa      |
-| Wednesday | Kwaku     | Akua        |
-| Thursday  | Yaw       | Yaa         |
-| Friday    | Kofi      | Afua        |
-| Saturday  | Kwame     | Ama         |
+ Akan Names
 
----
 
-## Author
+ Day        Male Name  Female Name |
 
-**Jethro Kiptoo**
+ Sunday     Kwasi     | Akosua      |
+ Monday     Kwadwo    | Adwoa       |
+ Tuesday    Kwabena   | Abenaa      |
+ Wednesday  Kwaku     | Akua        |
+ Thursday   Yaw       | Yaa         
+ Friday     Kofi      | Afua        |
+ Saturday   Kwame     | Ama         |
 
----
 
-## Technologies Used
+
+ Author
+
+Jethro Kiptoo
+
+
+
+Technologies Used
 
 * HTML5
 * CSS3
@@ -39,9 +40,9 @@ The application accepts a user's day, month, year, and gender, validates the inf
 * GitHub
 * GitHub Pages
 
----
 
-## Features
+
+ Features
 
 * User-friendly date input
 * Gender selection
@@ -52,31 +53,24 @@ The application accepts a user's day, month, year, and gender, validates the inf
 * Responsive design
 * Mobile-friendly layout
 
----
 
-## Setup Instructions
 
-### 1. Clone the repository
+ Setup Instructions
 
-```bash
-git clone https://github.com/yourusername/akan-name-generator.git
-```
 
-### 2. Open the project
 
-```bash
 cd akan-name-generator
-```
 
-### 3. Open the website
+
+3. Open the website
 
 Open `index.html` in a web browser.
 
----
 
-## BDD
 
-### Feature: Akan Name Generation
+BDD
+
+ Feature: Akan Name Generation
 
 **Scenario 1: Valid information**
 
@@ -90,19 +84,17 @@ Then the application calculates the day of the week.
 
 And displays the appropriate Akan name.
 
----
 
-### Scenario 2: Invalid day
+
+Scenario 2: Invalid day
 
 Given the user enters a day less than 1 or greater than 31.
 
 When the user submits the form.
 
-Then an alert should inform the user that the day is invalid.
+Then an alert should inform the user that the day is in
 
----
-
-### Scenario 3: Invalid month
+Scenario 3: Invalid month
 
 Given the user enters a month less than 1 or greater than 12.
 
@@ -110,9 +102,9 @@ When the user submits the form.
 
 Then an alert should inform the user that the month is invalid.
 
----
 
-### Scenario 4: Gender not selected
+
+ Scenario 4: Gender not selected
 
 Given the user enters a valid date.
 
@@ -122,9 +114,9 @@ When the user submits the form.
 
 Then an alert should ask the user to select a gender.
 
----
 
-## How to Use
+
+ How to Use
 
 1. Enter your day of birth.
 2. Enter your month of birth.
@@ -133,17 +125,17 @@ Then an alert should ask the user to select a gender.
 5. Click **Generate Akan Name**.
 6. Your birth day and Akan name will appear.
 
----
 
-## Contact
 
-**Author:** Jethro Kiptoo
+ Contact
+
+  Author: Jethro Kiptoo
 
 For questions or feedback, contact the project author.
 
----
 
-## License
+
+ License
 
 Copyright © 2026 Jethro Kiptoo.
 
